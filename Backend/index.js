@@ -15,6 +15,14 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
+app.get("/" , (req,res)=>{
+    res.json({
+        msg : "WELCOME TO ESKILLS API'S"
+    })
+})
+
+
+
 app.use("/api/otp",generateotp)
 app.use('/api/todos', require('./routes/todoRoutes'))
 
